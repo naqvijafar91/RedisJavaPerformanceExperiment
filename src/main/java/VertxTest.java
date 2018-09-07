@@ -76,6 +76,5 @@ public class VertxTest {
             }
         }
 
-//        Deserealize(value);
     }
 }

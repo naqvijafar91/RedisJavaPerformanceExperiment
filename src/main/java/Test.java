@@ -9,7 +9,7 @@ import reactor.core.scheduler.Schedulers;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class test {
+public class Test {
 
 
     private int timeInGet =0;
@@ -29,14 +29,16 @@ public class test {
         List<String> keys=syncCommands.keys("*");
         System.out.println("Size:"+keys.size());
 
-        test t=new test();
-//        t.fetchSync(connection,keys);
-//
+        Test t=new Test();
+        t.fetchSync(connection,keys);
 
+        //Uncomment for Future
 //        t.fetchAllAsync(connection,keys);
 
+        //Uncomment for Reactive
 //        t.fetchAllReactive(connection,keys);
 
+        //Uncomment for Vert.x
         t.vertxTest.execute();
         try{
             Thread.sleep(150000);
@@ -151,7 +153,7 @@ public class test {
 
     }
 
-    public test() {
+    public Test() {
          conf = FSTConfiguration.createDefaultConfiguration();
          vertxTest =new VertxTest();
     }
