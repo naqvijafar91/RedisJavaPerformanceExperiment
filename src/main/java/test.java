@@ -155,9 +155,4 @@ public class test {
          conf = FSTConfiguration.createDefaultConfiguration();
          vertxTest =new VertxTest();
     }
-    private void Deserealize(String value) {
-
-        Object obj=conf.asObject(value.getBytes());
-
-    }
 }
