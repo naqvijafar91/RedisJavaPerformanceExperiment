@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+dependencies {
+    compile 'io.netty:netty-all:4.1.15.Final'
+    compile "io.netty:netty-transport-native-epoll:4.1.15.Final:Linux-x86_64"
+    compile 'io.lettuce:lettuce-core:5.1.0.M1'
+    compile "de.ruedigermoeller:fst:2.56"
+    compile 'io.vertx:vertx-core:3.5.3'
+    compile 'io.vertx:vertx-redis-client:3.5.3'
+}
