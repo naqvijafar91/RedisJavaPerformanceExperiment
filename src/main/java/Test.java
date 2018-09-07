@@ -56,6 +56,9 @@ public class Test {
 
         long current=System.currentTimeMillis();
         for (int i=0;i<keys.size();i++) {
+
+//            Using unnecessary increment and decrement and If condition to match the
+//            performance lost in the async versions
             currentlyWorkingTasks++;
             long start=System.currentTimeMillis();
             String value=syncCommands.get(keys.get(i));
